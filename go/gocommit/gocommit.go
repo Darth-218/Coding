@@ -39,6 +39,8 @@ func getFiles(state string) (files []string) {
     startstring = "Untracked files:"
   case "commit":
     startstring = "Changes to be committed:"
+  case "changes":
+    startstring = "Changes not staged for commit:"
   default:
     fmt.Printf("Choices are either \"add\" or \"commit\"\n")
     return nil
