@@ -1,22 +1,50 @@
 package main
 
 import (
-  "fmt"
-  "log"
-  "os/exec"
-  "strings"
+	"bufio"
+	"fmt"
+	"log"
+	"os"
+	"os/exec"
+	"strings"
 )
 
 func main() {
-  var input string
-  fmt.Scanf("%s", &input)
-  fmt.Printf("Files: %v\n", getFiles(input))
-  // fmt.Printf("Add all files? (0/1): ")
-  // var choice int
-  // fmt.Scanf("%d", &choice)
-  // if choice > 0 {
-  //   addFiles(getFiles("add"))
-  // }
+  loop()
+}
+
+func loop() {
+  reader := bufio.NewReader(os.Stdin)
+  for 1 > 0 {
+    fmt.Printf(">> ")
+    input, err := reader.ReadString('\n')
+    if err == nil {
+      input = strings.TrimSuffix(input, "\n")
+      runCommand(input)
+    } else {
+      fmt.Printf("\n%v\n", err)
+      break
+    }
+  }
+}
+
+func runCommand(input string) {
+  switch input {
+  case "add":
+    fallthrough
+  case "commit":
+    fallthrough
+  case "changes":
+    fmt.Println(getFiles(input))
+  case "exit":
+    os.Exit(0)
+  case "view":
+    fmt.Printf("Untracked files: %v\nChanged files: %v\nFiles to commit: %v\n",
+      getFiles("add"),
+      getFiles("changes"),
+      getFiles("commit"))
+  }
+
 }
 
 func getStatus() (git_status []string) {
@@ -33,16 +61,19 @@ func getStatus() (git_status []string) {
 }
 
 func getFiles(state string) (files []string) {
-  var startstring string
+  var startstring, trim, alttrim string
   switch state {
   case "add":
     startstring = "Untracked files:"
   case "commit":
     startstring = "Changes to be committed:"
+    trim = "new file:   "
+    alttrim = "modified:   "
   case "changes":
     startstring = "Changes not staged for commit:"
+    trim = "modified:   "
   default:
-    fmt.Printf("Choices are either \"add\" or \"commit\"\n")
+    fmt.Printf("Choices are \"add\", \"commit\" or \"changes\"\n")
     return nil
   }
   files = getStatus()
@@ -57,10 +88,18 @@ func getFiles(state string) (files []string) {
       keyend = index
       break
     }
-
+    files[index] = strings.TrimPrefix(files[index], trim)
+    files[index] = strings.TrimPrefix(files[index], alttrim)
+  }
+  if keystart == len(files) {
+    files = nil
+    return
   }
   if keyend == 0 {
     keyend = len(files)
+  }
+  if startstring == "Changes not staged for commit:" {
+    keystart += 1
   }
   files = files[keystart + 2:keyend]
   return
