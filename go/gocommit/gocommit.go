@@ -39,7 +39,9 @@ func runCommand(input []string) {
       getFiles("")
     }
   case "add":
-    addFiles(getFiles("add"))
+    files := getFiles("add")
+    files = append(files[:], getFiles("changed")[:]...)
+    addFiles(files)
   case "commit":
     if len(input) > 1 {
       commitFiles(strings.Join(input[1:], " "))
@@ -75,16 +77,21 @@ func getFiles(state string) (files []string) {
     startstring = "Changes to be committed:"
     trim = "new file:   "
     alttrim = "modified:   "
-  case "changes":
+  case "changed":
     startstring = "Changes not staged for commit:"
     trim = "modified:   "
     alttrim = "deleted:   "
-  default:
+  case "":
+    fallthrough
+  case "all":
     fmt.Printf("Untracked files: %v\nChanged files: %v\nFiles to commit: %v\n",
       getFiles("add"),
       getFiles("changed"),
       getFiles("commit"))
-      return
+    return
+  default:
+    fmt.Printf("Invalid option \"%v\"", state)
+    return
   }
   files = getStatus()
   keystart := len(files)
@@ -115,14 +122,13 @@ func getFiles(state string) (files []string) {
   return
 }
 
-func addFiles(unstagedfiles []string) {
-  fmt.Printf("Unstaged Files:\n")
-  for index, value := range unstagedfiles {
+func addFiles(files []string) {
+  for index, value := range files {
     fmt.Printf("%v: %v\n", index + 1, value)
   }
   fmt.Println("Enter the index of the files to add.")
   reader := bufio.NewReader(os.Stdin)
-  fmt.Print("->> ")
+  fmt.Print("--> ")
   input, err := reader.ReadString('\n')
   var inputsplit []string
   if err == nil {
@@ -130,12 +136,12 @@ func addFiles(unstagedfiles []string) {
     inputsplit = strings.Split(input, " ")
     for _, value := range inputsplit {
       intvalue, _ := strconv.Atoi(value)
-      add := exec.Command("git", "add", unstagedfiles[intvalue - 1])
+      add := exec.Command("git", "add", files[intvalue - 1])
       err := add.Run()
       if err != nil {
         log.Fatal(err)
       } else {
-        log.Printf("Added: %v\n", unstagedfiles[intvalue - 1])
+        log.Printf("Added: %v\n", files[intvalue - 1])
       }
     }
   } else {
