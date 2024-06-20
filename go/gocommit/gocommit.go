@@ -7,6 +7,7 @@ import (
 	"os"
 	"os/exec"
 	"strings"
+	"strconv"
 )
 
 func main() {
@@ -20,7 +21,8 @@ func loop() {
     input, err := reader.ReadString('\n')
     if err == nil {
       input = strings.TrimSuffix(input, "\n")
-      runCommand(input)
+      inputsplit := strings.Split(input, " ")
+      runCommand(inputsplit)
     } else {
       fmt.Printf("\n%v\n", err)
       break
@@ -28,23 +30,27 @@ func loop() {
   }
 }
 
-func runCommand(input string) {
-  switch input {
+func runCommand(input []string) {
+  switch input[0] {
+  case "view":
+    if len(input) > 1 {
+      fmt.Println(getFiles(input[1]))
+    } else {
+      getFiles("")
+    }
   case "add":
-    fallthrough
+    addFiles(getFiles("add"))
   case "commit":
-    fallthrough
-  case "changes":
-    fmt.Println(getFiles(input))
+    if len(input) > 1 {
+      commitFiles(strings.Join(input[1:], " "))
+    } else {
+      fmt.Println("No commit message specified")
+    }
+  case "push":
+    pushFiles()
   case "exit":
     os.Exit(0)
-  case "view":
-    fmt.Printf("Untracked files: %v\nChanged files: %v\nFiles to commit: %v\n",
-      getFiles("add"),
-      getFiles("changes"),
-      getFiles("commit"))
   }
-
 }
 
 func getStatus() (git_status []string) {
@@ -72,9 +78,13 @@ func getFiles(state string) (files []string) {
   case "changes":
     startstring = "Changes not staged for commit:"
     trim = "modified:   "
+    alttrim = "deleted:   "
   default:
-    fmt.Printf("Choices are \"add\", \"commit\" or \"changes\"\n")
-    return nil
+    fmt.Printf("Untracked files: %v\nChanged files: %v\nFiles to commit: %v\n",
+      getFiles("add"),
+      getFiles("changed"),
+      getFiles("commit"))
+      return
   }
   files = getStatus()
   keystart := len(files)
@@ -105,12 +115,50 @@ func getFiles(state string) (files []string) {
   return
 }
 
-func addFiles(files []string) {
-  for _, value := range files {
-    add := exec.Command("git", "add", value)
-    err := add.Run()
-    if err != nil {
-      log.Fatal(err)
+func addFiles(unstagedfiles []string) {
+  fmt.Printf("Unstaged Files:\n")
+  for index, value := range unstagedfiles {
+    fmt.Printf("%v: %v\n", index + 1, value)
+  }
+  fmt.Println("Enter the index of the files to add.")
+  reader := bufio.NewReader(os.Stdin)
+  fmt.Print("->> ")
+  input, err := reader.ReadString('\n')
+  var inputsplit []string
+  if err == nil {
+    input = strings.TrimSuffix(input, "\n")
+    inputsplit = strings.Split(input, " ")
+    for _, value := range inputsplit {
+      intvalue, _ := strconv.Atoi(value)
+      add := exec.Command("git", "add", unstagedfiles[intvalue - 1])
+      err := add.Run()
+      if err != nil {
+        log.Fatal(err)
+      } else {
+        log.Printf("Added: %v\n", unstagedfiles[intvalue - 1])
+      }
     }
+  } else {
+    fmt.Println()
+  }
+}
+
+func commitFiles(commitmessage string) {
+  commit := exec.Command("git", "commit", "-m", commitmessage)
+  err := commit.Run()
+  if err != nil {
+    log.Fatal(err)
+  } else {
+    log.Println("Files committed")
+  }
+}
+
+func pushFiles() {
+  push := exec.Command("git", "push")
+  err := push.Run()
+  if err != nil {
+    log.Fatal(err)
+  } else {
+    log.Println("Pushed changes")
   }
 }
