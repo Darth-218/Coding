@@ -11,12 +11,33 @@ import (
 )
 
 func main() {
-  loop()
+  if checkDir() {
+    loop()
+  } else {
+    log.Fatal("Current directory is not a git repository.")
+  }
+}
+
+func checkDir() (isgit bool) {
+  isgit = false
+  fullpath, _ := os.Getwd()
+  paths := strings.Split(fullpath, "/")
+  var end int = len(paths) - 1
+  for end >= 0 {
+    currentpath := paths[:end]; end--
+    currentpathjoined := strings.Join(currentpath, "/") + "/.git"
+    _, err := os.ReadDir(currentpathjoined)
+    if err == nil {
+      isgit = true
+      return
+    }
+  }
+  return
 }
 
 func loop() {
   reader := bufio.NewReader(os.Stdin)
-  for 1 > 0 {
+  for true {
     fmt.Printf(">> ")
     input, err := reader.ReadString('\n')
     if err == nil {
