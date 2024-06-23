@@ -60,7 +60,7 @@ func runCommand(input []string) {
       getFiles("")
     }
   case "add":
-    files := getFiles("add")
+    files := getFiles("untracked")
     files = append(files[:], getFiles("changed")[:]...)
     addFiles(files)
   case "commit":
@@ -73,6 +73,8 @@ func runCommand(input []string) {
     pushFiles()
   case "exit":
     os.Exit(0)
+  default:
+    fmt.Println("Invalid option:", input[0])
   }
 }
 
@@ -92,9 +94,9 @@ func getStatus() (git_status []string) {
 func getFiles(state string) (files []string) {
   var startstring, trim, alttrim string
   switch state {
-  case "add":
+  case "untracked":
     startstring = "Untracked files:"
-  case "commit":
+  case "added":
     startstring = "Changes to be committed:"
     trim = "new file:   "
     alttrim = "modified:   "
@@ -106,9 +108,9 @@ func getFiles(state string) (files []string) {
     fallthrough
   case "all":
     fmt.Printf("Untracked files: %v\nChanged files: %v\nFiles to commit: %v\n",
-      getFiles("add"),
+      getFiles("untracked"),
       getFiles("changed"),
-      getFiles("commit"))
+      getFiles("added"))
     return
   default:
     fmt.Printf("Invalid option \"%v\"", state)
