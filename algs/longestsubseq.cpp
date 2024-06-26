@@ -1,20 +1,22 @@
+#include <algorithm>
 #include <iostream>
 #include <vector>
 using namespace std;
 
 int LIS(vector<int> a) {
-  vector<int> subs;
-  int sub = 0, count = 0;
-  for (int i = 0; i < a.size(); i++, sub = 0) {
-    for (int k = 0; k < a.size(); k++) {
-      if (a[k] > a[i] && k > i) {
-	sub++;
+  vector<int> l;
+  for (int i = 0; i < a.size(); i++) {
+    vector<int> sub;
+    for (int k = 0; k < i; k++) {
+      if (a[k] < a[i]) {
+	sub.push_back(l[k]);
       }
     }
-    subs.push_back(sub);
+    sort(sub.begin(), sub.end());
+    l.push_back(1 + sub[sub.size() - 1]);
   }
-  sort(subs.begin(), subs.end());
-  return subs[subs.size() - 1] + 1;
+  sort(l.begin(), l.end());
+  return l[l.size() - 1];
 }
 
 int main() {
