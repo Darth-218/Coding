@@ -25,10 +25,8 @@ def main(stdscr):
     commands_win = newwin(
         commands_win_height, commands_win_width, commands_win_y, commands_win_x
     )
-    commands_win.box()
 
     main_win = newwin(main_win_height, main_win_width, main_win_y, main_win_x)
-    main_win.box()
 
     printBinds(commands_win, commands_win_width)
     printSessions(main_win, main_win_width)
@@ -38,11 +36,12 @@ def main(stdscr):
     commands_win.refresh()
 
     while 1:
+        # current_dir = subprocess.check_output("pwd", shell = False).decode()
         commands = {
             "q": "quit()",
-            "n": "New session",
-            "c": f"createSession('{subprocess.check_output("pwd", shell = False).decode()}')",
-            "K": "killSession(" ")",
+            "n": "pass",
+            "c": 'createSession("' + subprocess.check_output("pwd", shell = False).decode() + '")',
+            "K": "killSession(\" \")",
         }
         keypress = stdscr.getkey()
         if keypress in commands:
