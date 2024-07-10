@@ -36,12 +36,11 @@ def main(stdscr):
     commands_win.refresh()
 
     while 1:
-        # current_dir = subprocess.check_output("pwd", shell = False).decode()
         commands = {
             "q": "quit()",
             "n": "pass",
-            "c": 'createSession("' + subprocess.check_output("pwd", shell = False).decode() + '")',
-            "K": "killSession(\" \")",
+            "c": "createSession(subprocess.check_output('pwd', shell=False).decode())",
+            "K": "killSession('')",
         }
         keypress = stdscr.getkey()
         if keypress in commands:
@@ -55,13 +54,14 @@ def printSessions(window, width) -> None:
     session_x = int((width - getMaxlen(sessions)) / 2)
     session_y = 1
     for i in sessions:
+        i = i[: i.find("(")]
         window.addstr(session_y, session_x, i)
         session_y += 2
     # window.refresh()
 
 
 def printBinds(window, width) -> None:
-    bindings = ["q: Quit", "n: New session", "c: Create session", "k: Kill session"]
+    bindings = ["q: Quit", "n: New session", "c: Create session", "K: Kill session"]
     y = int(width * 0.55)
     window.addstr(1, int(y * 0.35), bindings[0])
     window.addstr(1, y, bindings[1])
@@ -77,7 +77,7 @@ def getMaxlen(sessions: list[str]) -> int:
 
 
 def getSessions() -> list[str]:
-    list_command = ["tmux", "list-sessions"]
+    list_command = ["tmux", "ls"]
     sessions = subprocess.check_output(list_command, shell=False)
     sessions = sessions.decode()
     sessions = sessions.split("\n")
@@ -86,21 +86,24 @@ def getSessions() -> list[str]:
 
 def createSession(starting_directory: str, session_name=None) -> None:
     session_name = (
-        starting_directory.split()[-1] if session_name == None else session_name
+        starting_directory.split("/")[-1].strip()
+        if session_name == None
+        else session_name
     )
     new_session_command = [
         "tmux",
         "new-session",
         "-A",
-        "-d",
         "-c",
         starting_directory,
         "-s",
         session_name,
+        "-d",
     ]
     try:
-        subprocess.run(new_session_command)
-    except:  # FIX: Better error handling
+        subprocess.run(new_session_command, shell=False)
+
+    except subprocess.CalledProcessError:
         pass
 
 
