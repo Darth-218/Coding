@@ -3,7 +3,7 @@
 # TODO: Command exit codes
 
 import curses, subprocess
-from curses import wrapper, newwin
+from curses import wrapper, newwin, newpad
 
 
 def main(stdscr):
@@ -19,21 +19,28 @@ def main(stdscr):
 
     commands_win_height = int(main_win_height * 0.2)
     commands_win_width = main_win_width
-    commands_win_y = int(main_win_y + (main_win_height - main_win_height * 0.2)) + 1
+    commands_win_y = int(curses.LINES - commands_win_height) - 1
     commands_win_x = int(curses.COLS * 0.5) - int(commands_win_width * 0.5)
 
     commands_win = newwin(
         commands_win_height, commands_win_width, commands_win_y, commands_win_x
     )
 
-    main_win = newwin(main_win_height, main_win_width, main_win_y, main_win_x)
+    main_win = newpad(main_win_height, main_win_width)
 
     printBinds(commands_win, commands_win_width)
-    printSessions(main_win, main_win_width)
+    printSessions(main_win, main_win_width, main_win_height, main_win_x, main_win_y)
 
     stdscr.refresh()
-    main_win.refresh()
     commands_win.refresh()
+    main_win.refresh(
+        0,
+        0,
+        main_win_y,
+        main_win_x,
+        main_win_y + main_win_height,
+        main_win_x + main_win_width,
+    )
 
     while 1:
         commands = {
@@ -45,30 +52,37 @@ def main(stdscr):
         keypress = stdscr.getkey()
         if keypress in commands:
             eval(commands[keypress])
-            printSessions(main_win, main_win_width)
-            main_win.refresh()
+            printSessions(
+                main_win, main_win_width, main_win_height, main_win_x, main_win_y
+            )
 
 
-def printSessions(window, width) -> None:
+def printSessions(window, width, height, x, y) -> None:
     sessions = getSessions()
-    session_x = int((width - getMaxlen(sessions)) / 2)
+    for i in range(len(sessions)):
+        sessions[i] = sessions[i][: sessions[i].find("(")]
+    session_x = int(width / 2)
     session_y = 1
     for i in sessions:
-        i = i[: i.find("(")]
-        window.addstr(session_y, session_x, i)
+        window.addstr(session_y, session_x - int(0.5 * len(i)), i)
         session_y += 2
-    # window.refresh()
+    window.refresh(
+        0,
+        0,
+        y,
+        x,
+        y + height,
+        x + width,
+    )
 
 
 def printBinds(window, width) -> None:
     bindings = ["q: Quit", "n: New session", "c: Create session", "K: Kill session"]
-    y = int(width * 0.55)
-    window.addstr(1, int(y * 0.35), bindings[0])
-    window.addstr(1, y, bindings[1])
-    window.addstr(2, int(y * 0.35), bindings[2])
-    window.addstr(2, y, bindings[3])
+    x = width // 2 - len(" - ".join(bindings)) // 2
+    window.addstr(0, x, " - ".join(bindings))
 
 
+# FIX: remove or find a use
 def getMaxlen(sessions: list[str]) -> int:
     maxlen = 0
     for i in sessions:
@@ -90,6 +104,9 @@ def createSession(starting_directory: str, session_name=None) -> None:
         if session_name == None
         else session_name
     )
+    if session_name + ":" in " ".join(getSessions()):
+        return
+
     new_session_command = [
         "tmux",
         "new-session",
@@ -100,8 +117,16 @@ def createSession(starting_directory: str, session_name=None) -> None:
         session_name,
         "-d",
     ]
+    attach_session_command = [
+        "tmux",
+        "switch-client",
+        "-t",
+        session_name,
+    ]
     try:
         subprocess.run(new_session_command, shell=False)
+        subprocess.run(attach_session_command, shell=False)
+        quit()
 
     except subprocess.CalledProcessError:
         pass
