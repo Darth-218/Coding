@@ -1,0 +1,15 @@
+/home/darth/the-duat/coding/Csharp/scratch/bin/Debug/net8.0/scratch
+/home/darth/the-duat/coding/Csharp/scratch/bin/Debug/net8.0/scratch.deps.json
+/home/darth/the-duat/coding/Csharp/scratch/bin/Debug/net8.0/scratch.runtimeconfig.json
+/home/darth/the-duat/coding/Csharp/scratch/bin/Debug/net8.0/scratch.dll
+/home/darth/the-duat/coding/Csharp/scratch/bin/Debug/net8.0/scratch.pdb
+/home/darth/the-duat/coding/Csharp/scratch/obj/Debug/net8.0/scratch.GeneratedMSBuildEditorConfig.editorconfig
+/home/darth/the-duat/coding/Csharp/scratch/obj/Debug/net8.0/scratch.AssemblyInfoInputs.cache
+/home/darth/the-duat/coding/Csharp/scratch/obj/Debug/net8.0/scratch.AssemblyInfo.cs
+/home/darth/the-duat/coding/Csharp/scratch/obj/Debug/net8.0/scratch.csproj.CoreCompileInputs.cache
+/home/darth/the-duat/coding/Csharp/scratch/obj/Debug/net8.0/scratch.sourcelink.json
+/home/darth/the-duat/coding/Csharp/scratch/obj/Debug/net8.0/scratch.dll
+/home/darth/the-duat/coding/Csharp/scratch/obj/Debug/net8.0/refint/scratch.dll
+/home/darth/the-duat/coding/Csharp/scratch/obj/Debug/net8.0/scratch.pdb
+/home/darth/the-duat/coding/Csharp/scratch/obj/Debug/net8.0/scratch.genruntimeconfig.cache
+/home/darth/the-duat/coding/Csharp/scratch/obj/Debug/net8.0/ref/scratch.dll
