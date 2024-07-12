@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "uLb1q7cOqi2tFJWhKj6r0VWcuUpQttR6rM4e0BxcTuWGp3VPwd67DyOVJhcp1748n5TXLtlDiflMamtr5ky04g==",
+  "success": true,
+  "projectFilePath": "/home/darth/the-duat/coding/Csharp/console/console.csproj",
+  "expectedPackageFiles": [
+    "/home/darth/.nuget/packages/microsoft.aspnetcore.app.ref/8.0.6/microsoft.aspnetcore.app.ref.8.0.6.nupkg.sha512"
+  ],
+  "logs": []
+}

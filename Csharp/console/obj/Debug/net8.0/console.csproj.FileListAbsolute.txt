@@ -1,0 +1,15 @@
+/home/darth/the-duat/coding/Csharp/console/bin/Debug/net8.0/console
+/home/darth/the-duat/coding/Csharp/console/bin/Debug/net8.0/console.deps.json
+/home/darth/the-duat/coding/Csharp/console/bin/Debug/net8.0/console.runtimeconfig.json
+/home/darth/the-duat/coding/Csharp/console/bin/Debug/net8.0/console.dll
+/home/darth/the-duat/coding/Csharp/console/bin/Debug/net8.0/console.pdb
+/home/darth/the-duat/coding/Csharp/console/obj/Debug/net8.0/console.GeneratedMSBuildEditorConfig.editorconfig
+/home/darth/the-duat/coding/Csharp/console/obj/Debug/net8.0/console.AssemblyInfoInputs.cache
+/home/darth/the-duat/coding/Csharp/console/obj/Debug/net8.0/console.AssemblyInfo.cs
+/home/darth/the-duat/coding/Csharp/console/obj/Debug/net8.0/console.csproj.CoreCompileInputs.cache
+/home/darth/the-duat/coding/Csharp/console/obj/Debug/net8.0/console.sourcelink.json
+/home/darth/the-duat/coding/Csharp/console/obj/Debug/net8.0/console.dll
+/home/darth/the-duat/coding/Csharp/console/obj/Debug/net8.0/refint/console.dll
+/home/darth/the-duat/coding/Csharp/console/obj/Debug/net8.0/console.pdb
+/home/darth/the-duat/coding/Csharp/console/obj/Debug/net8.0/console.genruntimeconfig.cache
+/home/darth/the-duat/coding/Csharp/console/obj/Debug/net8.0/ref/console.dll
