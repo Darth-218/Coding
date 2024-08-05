@@ -33,9 +33,7 @@ def main(stdscr):
         commands_win_x,
         commands_win_y,
     )
-    printSessions(
-        main_win, main_win_width, main_win_height, main_win_x, main_win_y, selected
-    )
+    printSessions(main_win, main_win_width, selected)
 
     stdscr.refresh()
     main_win.refresh(
@@ -69,12 +67,12 @@ def main(stdscr):
             exec(commands[keypress])
         elif keypress == "j":
             selected += 1
-            if selected >= len(getSessions()):
+            if selected == len(getSessions()) - 1:
                 selected = 0
         elif keypress == "k":
             selected -= 1
             if selected < 0:
-                selected = len(getSessions()) - 1
+                selected = len(getSessions()) - 2
         elif keypress == "l":
             switchSession(getSessions()[selected].split(":")[0])
         else:
@@ -83,9 +81,6 @@ def main(stdscr):
         printSessions(
             main_win,
             main_win_width,
-            main_win_height,
-            main_win_x,
-            main_win_y,
             selected,
         )
         main_win.refresh(
@@ -111,10 +106,10 @@ def updateSelected(selected: int, x: int):
     return selected
 
 
-def printSessions(window, width, height, x, y, selected) -> None:
+def printSessions(window, width, selected) -> None:
     sessions = getSessions()
     for i in range(len(sessions)):
-        sessions[i] = sessions[i][: sessions[i].find("(")]
+        sessions[i] = sessions[i][: sessions[i].find("(")].strip()
     session_x = int(width / 2)
     session_y = 1
     middle_diff = getMaxlen(sessions)

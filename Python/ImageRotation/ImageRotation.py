@@ -4,6 +4,7 @@
 # Assumption: Document image contains all text in same orientation
 
 import cv2
+import sys
 import numpy as np
 
 debug = True
@@ -47,6 +48,9 @@ def slope(x1, y1, x2, y2):
         return 0
     slope = (y2 - y1) / (x2 - x1)
     theta = np.rad2deg(np.arctan(slope))
+    if theta == 0.0:
+        print("Image is already in the correct orientation")
+        quit()
     return theta
 
 
@@ -70,7 +74,7 @@ def main(filePath):
     # kernal value (9,1) can be changed to improved the text detection
     kernel = cv2.getStructuringElement(cv2.MORPH_RECT, (9, 1))
     connected = cv2.morphologyEx(bw, cv2.MORPH_CLOSE, kernel)
-    # display(connected)
+    display(connected)
 
     # using RETR_EXTERNAL instead of RETR_CCOMP
     # _ , contours, hierarchy = cv2.findContours(connected.copy(), cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_NONE)
@@ -79,7 +83,7 @@ def main(filePath):
     )  # opencv >= 4.0
 
     mask = np.zeros(bw.shape, dtype=np.uint8)
-    # # display(mask)
+    # display(mask)
     # cumulative theta value
     cummTheta = 0
     # number of detected text regions
@@ -116,9 +120,10 @@ def main(filePath):
     # display(textImg, "Detectd Text minimum bounding box")
     # display(finalImage, "Deskewed Image")
     finalName = str(filePath).split(".")[0]
-    cv2.imwrite(f"rotated_{str(finalName.split(".")[0])}.jpg", finalImage)
+    cv2.imwrite(f"rotated_{finalName}.jpg", finalImage)
 
 
 if __name__ == "__main__":
-    filePath = input("Image path: ")
+    filePath = sys.argv[1]
+    print(filePath)
     main(filePath)
