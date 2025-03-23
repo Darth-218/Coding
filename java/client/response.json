@@ -1,0 +1,760 @@
+{"parts":[{"id":"part1","path":"https://iajugs-test.fa.ocs.oraclecloud.com:443/fscmRestApi/resources/11.13.18.05/receivablesInvoices","operation":"create","payload" : {
+  "CustomerTransactionId" : 300000004426801,
+  "DueDate" : "2025-01-26",
+  "ConversionDate" : null,
+  "ConversionRate" : null,
+  "InvoiceCurrencyCode" : "EGP",
+  "SpecialInstructions" : null,
+  "CrossReference" : null,
+  "DocumentNumber" : null,
+  "TransactionNumber" : "28064",
+  "TransactionDate" : "2025-01-26",
+  "TransactionType" : "L-Inv-Contr-Cash Con",
+  "TransactionSource" : "AMG_MANUAL",
+  "BillToCustomerNumber" : "2",
+  "BillToSite" : "1",
+  "Comments" : "New Walk-in",
+  "InternalNotes" : "From SoapUI with ...",
+  "PaymentTerms" : "30 Net",
+  "LegalEntityIdentifier" : "204936624",
+  "ConversionRateType" : null,
+  "PurchaseOrder" : null,
+  "PurchaseOrderDate" : null,
+  "PurchaseOrderRevision" : null,
+  "FirstPartyRegistrationNumber" : null,
+  "ThirdPartyRegistrationNumber" : null,
+  "InvoicingRule" : null,
+  "ShipToCustomerName" : "شركه United (يونايتد كير)",
+  "ShipToCustomerNumber" : "2094",
+  "BillingDate" : "2025-01-26",
+  "BillToPartyId" : 300000002605370,
+  "BusinessUnit" : "Alfa Labs BU",
+  "InvoiceStatus" : "Complete",
+  "AccountingDate" : "2025-02-01",
+  "ShipToSite" : "2034",
+  "PayingCustomerName" : "شركه United (يونايتد كير)",
+  "PayingCustomerSite" : "1",
+  "BillToCustomerName" : "شركه United (يونايتد كير)",
+  "FreightAmount" : null,
+  "Carrier" : null,
+  "ShipDate" : null,
+  "ShippingReference" : null,
+  "BillToContact" : null,
+  "ShipToContact" : null,
+  "PrintOption" : "Yes",
+  "CreatedBy" : "amg.interface",
+  "CreationDate" : "2025-03-10T10:50:52.001+00:00",
+  "LastUpdatedBy" : "amg.interface",
+  "LastUpdateDate" : "2025-03-10T10:50:52.898+00:00",
+  "PayingCustomerAccount" : "2",
+  "SoldToPartyNumber" : "2094",
+  "RemitToAddress" : "(B2) الوحدة الإدارية بالدور الثالث مبنى الفا ميديكال جروب رقم, اسبانا بلازا قطعة الارض رقم ب اسكان ، مدخل 4-1",
+  "DefaultTaxationCountry" : "EG",
+  "EnteredAmount" : 8500,
+  "InvoiceBalanceAmount" : 8500,
+  "Prepayment" : "No",
+  "Intercompany" : "No",
+  "DocumentFiscalClassification" : null,
+  "BankAccountNumber" : null,
+  "CreditCardAuthorizationRequestIdentifier" : null,
+  "CreditCardExpirationDate" : null,
+  "CreditCardIssuerCode" : null,
+  "CreditCardTokenNumber" : null,
+  "CreditCardVoiceAuthorizationCode" : null,
+  "CreditCardErrorCode" : null,
+  "CreditCardErrorText" : null,
+  "CardHolderLastName" : null,
+  "CardHolderFirstName" : null,
+  "ReceiptMethod" : null,
+  "SalesPersonNumber" : null,
+  "StructuredPaymentReference" : null,
+  "InvoicePrinted" : null,
+  "LastPrintDate" : null,
+  "OriginalPrintDate" : null,
+  "DeliveryMethod" : null,
+  "Email" : null,
+  "AllowCompletion" : null,
+  "ControlCompletionReason" : null,
+  "receivablesInvoiceLines" : [ {
+    "CustomerTransactionLineId" : 300000004426802,
+    "LineNumber" : 1,
+    "Description" : "Walk-in",
+    "Quantity" : 1,
+    "UnitSellingPrice" : 8500,
+    "TaxClassificationCode" : null,
+    "SalesOrder" : null,
+    "AccountingRuleDuration" : null,
+    "RuleEndDate" : null,
+    "RuleStartDate" : null,
+    "AccountingRule" : null,
+    "Warehouse" : null,
+    "MemoLine" : null,
+    "UnitOfMeasure" : null,
+    "ItemNumber" : null,
+    "AllocatedFreightAmount" : null,
+    "AssessableValue" : 8500,
+    "SalesOrderDate" : null,
+    "LineAmount" : 8500,
+    "CreatedBy" : "amg.interface",
+    "CreationDate" : "2025-03-10T10:50:52.644+00:00",
+    "LastUpdatedBy" : "amg.interface",
+    "LastUpdateDate" : "2025-03-10T10:50:52.902+00:00",
+    "TransacationBusinessCategory" : "Sales Transaction",
+    "UserDefinedFiscalClassification" : null,
+    "ProductFiscalClassification" : null,
+    "ProductCategory" : null,
+    "ProductType" : null,
+    "LineIntendedUse" : null,
+    "LineAmountIncludesTax" : "Use Tax Rate Code",
+    "TaxInvoiceDate" : null,
+    "TaxInvoiceNumber" : null,
+    "TaxExemptionCertificateNumber" : null,
+    "TaxExemptionHandling" : "Standard",
+    "TaxExemptionReason" : null,
+    "links" : [ {
+      "rel" : "self",
+      "href" : "https://iajugs-test.fa.ocs.oraclecloud.com:443/fscmRestApi/resources/11.13.18.05/receivablesInvoices/300000004426801/child/receivablesInvoiceLines/300000004426802",
+      "name" : "receivablesInvoiceLines",
+      "kind" : "item",
+      "properties" : {
+        "changeIndicator" : "ACED0005737200136A6176612E7574696C2E41727261794C6973747881D21D99C7619D03000149000473697A65787000000001770400000001737200116A6176612E6C616E672E496E746567657212E2A0A4F781873802000149000576616C7565787200106A6176612E6C616E672E4E756D62657286AC951D0B94E08B02000078700000000478"
+      }
+    }, {
+      "rel" : "canonical",
+      "href" : "https://iajugs-test.fa.ocs.oraclecloud.com:443/fscmRestApi/resources/11.13.18.05/receivablesInvoices/300000004426801/child/receivablesInvoiceLines/300000004426802",
+      "name" : "receivablesInvoiceLines",
+      "kind" : "item"
+    }, {
+      "rel" : "parent",
+      "href" : "https://iajugs-test.fa.ocs.oraclecloud.com:443/fscmRestApi/resources/11.13.18.05/receivablesInvoices/300000004426801",
+      "name" : "receivablesInvoices",
+      "kind" : "item"
+    }, {
+      "rel" : "lov",
+      "href" : "https://iajugs-test.fa.ocs.oraclecloud.com:443/fscmRestApi/resources/11.13.18.05/receivablesInvoices/300000004426801/child/receivablesInvoiceLines/300000004426802/lov/exemptReasonCodes",
+      "name" : "exemptReasonCodes",
+      "kind" : "collection"
+    }, {
+      "rel" : "lov",
+      "href" : "https://iajugs-test.fa.ocs.oraclecloud.com:443/fscmRestApi/resources/11.13.18.05/receivablesInvoices/300000004426801/child/receivablesInvoiceLines/300000004426802/lov/productCategories",
+      "name" : "productCategories",
+      "kind" : "collection"
+    }, {
+      "rel" : "lov",
+      "href" : "https://iajugs-test.fa.ocs.oraclecloud.com:443/fscmRestApi/resources/11.13.18.05/receivablesInvoices/300000004426801/child/receivablesInvoiceLines/300000004426802/lov/userDefinedFiscClasses",
+      "name" : "userDefinedFiscClasses",
+      "kind" : "collection"
+    }, {
+      "rel" : "lov",
+      "href" : "https://iajugs-test.fa.ocs.oraclecloud.com:443/fscmRestApi/resources/11.13.18.05/receivablesInvoices/300000004426801/child/receivablesInvoiceLines/300000004426802/lov/accountingRules",
+      "name" : "accountingRules",
+      "kind" : "collection"
+    }, {
+      "rel" : "lov",
+      "href" : "https://iajugs-test.fa.ocs.oraclecloud.com:443/fscmRestApi/resources/11.13.18.05/receivablesInvoices/300000004426801/child/receivablesInvoiceLines/300000004426802/lov/transactionBizCategories",
+      "name" : "transactionBizCategories",
+      "kind" : "collection"
+    }, {
+      "rel" : "lov",
+      "href" : "https://iajugs-test.fa.ocs.oraclecloud.com:443/fscmRestApi/resources/11.13.18.05/receivablesInvoices/300000004426801/child/receivablesInvoiceLines/300000004426802/lov/unitOfMeasures",
+      "name" : "unitOfMeasures",
+      "kind" : "collection"
+    }, {
+      "rel" : "lov",
+      "href" : "https://iajugs-test.fa.ocs.oraclecloud.com:443/fscmRestApi/resources/11.13.18.05/receivablesInvoices/300000004426801/child/receivablesInvoiceLines/300000004426802/lov/taxExemptHandlingStatuses",
+      "name" : "taxExemptHandlingStatuses",
+      "kind" : "collection"
+    }, {
+      "rel" : "lov",
+      "href" : "https://iajugs-test.fa.ocs.oraclecloud.com:443/fscmRestApi/resources/11.13.18.05/receivablesInvoices/300000004426801/child/receivablesInvoiceLines/300000004426802/lov/warehouses",
+      "name" : "warehouses",
+      "kind" : "collection"
+    }, {
+      "rel" : "lov",
+      "href" : "https://iajugs-test.fa.ocs.oraclecloud.com:443/fscmRestApi/resources/11.13.18.05/receivablesInvoices/300000004426801/child/receivablesInvoiceLines/300000004426802/lov/itemNumbers",
+      "name" : "itemNumbers",
+      "kind" : "collection"
+    }, {
+      "rel" : "lov",
+      "href" : "https://iajugs-test.fa.ocs.oraclecloud.com:443/fscmRestApi/resources/11.13.18.05/receivablesInvoices/300000004426801/child/receivablesInvoiceLines/300000004426802/lov/productTypes",
+      "name" : "productTypes",
+      "kind" : "collection"
+    }, {
+      "rel" : "lov",
+      "href" : "https://iajugs-test.fa.ocs.oraclecloud.com:443/fscmRestApi/resources/11.13.18.05/receivablesInvoices/300000004426801/child/receivablesInvoiceLines/300000004426802/lov/productFiscClassifications",
+      "name" : "productFiscClassifications",
+      "kind" : "collection"
+    }, {
+      "rel" : "lov",
+      "href" : "https://iajugs-test.fa.ocs.oraclecloud.com:443/fscmRestApi/resources/11.13.18.05/receivablesInvoices/300000004426801/child/receivablesInvoiceLines/300000004426802/lov/memoLines",
+      "name" : "memoLines",
+      "kind" : "collection"
+    }, {
+      "rel" : "child",
+      "href" : "https://iajugs-test.fa.ocs.oraclecloud.com:443/fscmRestApi/resources/11.13.18.05/receivablesInvoices/300000004426801/child/receivablesInvoiceLines/300000004426802/child/attachments",
+      "name" : "attachments",
+      "kind" : "collection"
+    }, {
+      "rel" : "child",
+      "href" : "https://iajugs-test.fa.ocs.oraclecloud.com:443/fscmRestApi/resources/11.13.18.05/receivablesInvoices/300000004426801/child/receivablesInvoiceLines/300000004426802/child/receivablesInvoiceLineDFF",
+      "name" : "receivablesInvoiceLineDFF",
+      "kind" : "collection"
+    }, {
+      "rel" : "child",
+      "href" : "https://iajugs-test.fa.ocs.oraclecloud.com:443/fscmRestApi/resources/11.13.18.05/receivablesInvoices/300000004426801/child/receivablesInvoiceLines/300000004426802/child/receivablesInvoiceLineGdf",
+      "name" : "receivablesInvoiceLineGdf",
+      "kind" : "collection"
+    }, {
+      "rel" : "child",
+      "href" : "https://iajugs-test.fa.ocs.oraclecloud.com:443/fscmRestApi/resources/11.13.18.05/receivablesInvoices/300000004426801/child/receivablesInvoiceLines/300000004426802/child/receivablesInvoiceLineTaxLines",
+      "name" : "receivablesInvoiceLineTaxLines",
+      "kind" : "collection"
+    }, {
+      "rel" : "child",
+      "href" : "https://iajugs-test.fa.ocs.oraclecloud.com:443/fscmRestApi/resources/11.13.18.05/receivablesInvoices/300000004426801/child/receivablesInvoiceLines/300000004426802/child/receivablesInvoiceLineTransactionDFF",
+      "name" : "receivablesInvoiceLineTransactionDFF",
+      "kind" : "collection"
+    } ]
+  } ],
+  "receivablesInvoiceDistributions" : [ {
+    "DistributionId" : 300000004426803,
+    "InvoiceLineNumber" : 1,
+    "DetailedTaxLineNumber" : null,
+    "AccountClass" : "Revenue",
+    "AccountCombination" : "10-110102-41010102-213-L01012-000-10-0000-0000",
+    "Amount" : 8500,
+    "AccountedAmount" : 8500,
+    "Percent" : 100,
+    "Comments" : null,
+    "CreatedBy" : "amg.interface",
+    "CreationDate" : "2025-03-10T10:50:52.665+00:00",
+    "LastUpdateDate" : "2025-03-10T10:50:53+00:00",
+    "LastUpdatedBy" : "amg.interface",
+    "links" : [ {
+      "rel" : "self",
+      "href" : "https://iajugs-test.fa.ocs.oraclecloud.com:443/fscmRestApi/resources/11.13.18.05/receivablesInvoices/300000004426801/child/receivablesInvoiceDistributions/300000004426803",
+      "name" : "receivablesInvoiceDistributions",
+      "kind" : "item",
+      "properties" : {
+        "changeIndicator" : "ACED0005737200136A6176612E7574696C2E41727261794C6973747881D21D99C7619D03000149000473697A65787000000001770400000001737200116A6176612E6C616E672E496E746567657212E2A0A4F781873802000149000576616C7565787200106A6176612E6C616E672E4E756D62657286AC951D0B94E08B02000078700000000278"
+      }
+    }, {
+      "rel" : "canonical",
+      "href" : "https://iajugs-test.fa.ocs.oraclecloud.com:443/fscmRestApi/resources/11.13.18.05/receivablesInvoices/300000004426801/child/receivablesInvoiceDistributions/300000004426803",
+      "name" : "receivablesInvoiceDistributions",
+      "kind" : "item"
+    }, {
+      "rel" : "parent",
+      "href" : "https://iajugs-test.fa.ocs.oraclecloud.com:443/fscmRestApi/resources/11.13.18.05/receivablesInvoices/300000004426801",
+      "name" : "receivablesInvoices",
+      "kind" : "item"
+    }, {
+      "rel" : "child",
+      "href" : "https://iajugs-test.fa.ocs.oraclecloud.com:443/fscmRestApi/resources/11.13.18.05/receivablesInvoices/300000004426801/child/receivablesInvoiceDistributions/300000004426803/child/receivablesInvoiceDistributionDFF",
+      "name" : "receivablesInvoiceDistributionDFF",
+      "kind" : "collection"
+    } ]
+  } ],
+  "links" : [ {
+    "rel" : "self",
+    "href" : "https://iajugs-test.fa.ocs.oraclecloud.com:443/fscmRestApi/resources/11.13.18.05/receivablesInvoices/300000004426801",
+    "name" : "receivablesInvoices",
+    "kind" : "item",
+    "properties" : {
+      "changeIndicator" : "ACED0005737200136A6176612E7574696C2E41727261794C6973747881D21D99C7619D03000149000473697A65787000000001770400000001737200116A6176612E6C616E672E496E746567657212E2A0A4F781873802000149000576616C7565787200106A6176612E6C616E672E4E756D62657286AC951D0B94E08B02000078700000000278"
+    }
+  }, {
+    "rel" : "canonical",
+    "href" : "https://iajugs-test.fa.ocs.oraclecloud.com:443/fscmRestApi/resources/11.13.18.05/receivablesInvoices/300000004426801",
+    "name" : "receivablesInvoices",
+    "kind" : "item"
+  }, {
+    "rel" : "lov",
+    "href" : "https://iajugs-test.fa.ocs.oraclecloud.com:443/fscmRestApi/resources/11.13.18.05/receivablesInvoices/300000004426801/lov/billToCustomers",
+    "name" : "billToCustomers",
+    "kind" : "collection"
+  }, {
+    "rel" : "lov",
+    "href" : "https://iajugs-test.fa.ocs.oraclecloud.com:443/fscmRestApi/resources/11.13.18.05/receivablesInvoices/300000004426801/lov/invoicingRules",
+    "name" : "invoicingRules",
+    "kind" : "collection"
+  }, {
+    "rel" : "lov",
+    "href" : "https://iajugs-test.fa.ocs.oraclecloud.com:443/fscmRestApi/resources/11.13.18.05/receivablesInvoices/300000004426801/lov/transactionTypes",
+    "name" : "transactionTypes",
+    "kind" : "collection"
+  }, {
+    "rel" : "lov",
+    "href" : "https://iajugs-test.fa.ocs.oraclecloud.com:443/fscmRestApi/resources/11.13.18.05/receivablesInvoices/300000004426801/lov/billToSites",
+    "name" : "billToSites",
+    "kind" : "collection"
+  }, {
+    "rel" : "lov",
+    "href" : "https://iajugs-test.fa.ocs.oraclecloud.com:443/fscmRestApi/resources/11.13.18.05/receivablesInvoices/300000004426801/lov/taxationCountries",
+    "name" : "taxationCountries",
+    "kind" : "collection"
+  }, {
+    "rel" : "lov",
+    "href" : "https://iajugs-test.fa.ocs.oraclecloud.com:443/fscmRestApi/resources/11.13.18.05/receivablesInvoices/300000004426801/lov/businessUnits",
+    "name" : "businessUnits",
+    "kind" : "collection"
+  }, {
+    "rel" : "lov",
+    "href" : "https://iajugs-test.fa.ocs.oraclecloud.com:443/fscmRestApi/resources/11.13.18.05/receivablesInvoices/300000004426801/lov/transactionSources",
+    "name" : "transactionSources",
+    "kind" : "collection"
+  }, {
+    "rel" : "lov",
+    "href" : "https://iajugs-test.fa.ocs.oraclecloud.com:443/fscmRestApi/resources/11.13.18.05/receivablesInvoices/300000004426801/lov/invoiceStatuses",
+    "name" : "invoiceStatuses",
+    "kind" : "collection"
+  }, {
+    "rel" : "lov",
+    "href" : "https://iajugs-test.fa.ocs.oraclecloud.com:443/fscmRestApi/resources/11.13.18.05/receivablesInvoices/300000004426801/lov/deliveryMethodVA",
+    "name" : "deliveryMethodVA",
+    "kind" : "collection"
+  }, {
+    "rel" : "lov",
+    "href" : "https://iajugs-test.fa.ocs.oraclecloud.com:443/fscmRestApi/resources/11.13.18.05/receivablesInvoices/300000004426801/lov/thirdPartyTaxRegistrationNumbers",
+    "name" : "thirdPartyTaxRegistrationNumbers",
+    "kind" : "collection"
+  }, {
+    "rel" : "lov",
+    "href" : "https://iajugs-test.fa.ocs.oraclecloud.com:443/fscmRestApi/resources/11.13.18.05/receivablesInvoices/300000004426801/lov/PaymentTermsVA",
+    "name" : "PaymentTermsVA",
+    "kind" : "collection"
+  }, {
+    "rel" : "lov",
+    "href" : "https://iajugs-test.fa.ocs.oraclecloud.com:443/fscmRestApi/resources/11.13.18.05/receivablesInvoices/300000004426801/lov/legalEntities",
+    "name" : "legalEntities",
+    "kind" : "collection"
+  }, {
+    "rel" : "lov",
+    "href" : "https://iajugs-test.fa.ocs.oraclecloud.com:443/fscmRestApi/resources/11.13.18.05/receivablesInvoices/300000004426801/lov/shipToCustomers",
+    "name" : "shipToCustomers",
+    "kind" : "collection"
+  }, {
+    "rel" : "child",
+    "href" : "https://iajugs-test.fa.ocs.oraclecloud.com:443/fscmRestApi/resources/11.13.18.05/receivablesInvoices/300000004426801/child/attachments",
+    "name" : "attachments",
+    "kind" : "collection"
+  }, {
+    "rel" : "child",
+    "href" : "https://iajugs-test.fa.ocs.oraclecloud.com:443/fscmRestApi/resources/11.13.18.05/receivablesInvoices/300000004426801/child/notes",
+    "name" : "notes",
+    "kind" : "collection"
+  }, {
+    "rel" : "child",
+    "href" : "https://iajugs-test.fa.ocs.oraclecloud.com:443/fscmRestApi/resources/11.13.18.05/receivablesInvoices/300000004426801/child/receivablesInvoiceDFF",
+    "name" : "receivablesInvoiceDFF",
+    "kind" : "collection"
+  }, {
+    "rel" : "child",
+    "href" : "https://iajugs-test.fa.ocs.oraclecloud.com:443/fscmRestApi/resources/11.13.18.05/receivablesInvoices/300000004426801/child/receivablesInvoiceDistributions",
+    "name" : "receivablesInvoiceDistributions",
+    "kind" : "collection"
+  }, {
+    "rel" : "child",
+    "href" : "https://iajugs-test.fa.ocs.oraclecloud.com:443/fscmRestApi/resources/11.13.18.05/receivablesInvoices/300000004426801/child/receivablesInvoiceGdf",
+    "name" : "receivablesInvoiceGdf",
+    "kind" : "collection"
+  }, {
+    "rel" : "child",
+    "href" : "https://iajugs-test.fa.ocs.oraclecloud.com:443/fscmRestApi/resources/11.13.18.05/receivablesInvoices/300000004426801/child/receivablesInvoiceInstallments",
+    "name" : "receivablesInvoiceInstallments",
+    "kind" : "collection"
+  }, {
+    "rel" : "child",
+    "href" : "https://iajugs-test.fa.ocs.oraclecloud.com:443/fscmRestApi/resources/11.13.18.05/receivablesInvoices/300000004426801/child/receivablesInvoiceLines",
+    "name" : "receivablesInvoiceLines",
+    "kind" : "collection"
+  }, {
+    "rel" : "child",
+    "href" : "https://iajugs-test.fa.ocs.oraclecloud.com:443/fscmRestApi/resources/11.13.18.05/receivablesInvoices/300000004426801/child/receivablesInvoiceTransactionDFF",
+    "name" : "receivablesInvoiceTransactionDFF",
+    "kind" : "collection"
+  } ]
+}
+}, {
+"id" : "part2",
+"path" : "https://iajugs-test.fa.ocs.oraclecloud.com:443/fscmRestApi/resources/11.13.18.05/receivablesInvoices",
+"operation" : "create",
+"payload" : {
+  "CustomerTransactionId" : 300000004426804,
+  "DueDate" : "2025-01-27",
+  "ConversionDate" : null,
+  "ConversionRate" : null,
+  "InvoiceCurrencyCode" : "EGP",
+  "SpecialInstructions" : null,
+  "CrossReference" : null,
+  "DocumentNumber" : null,
+  "TransactionNumber" : "28065",
+  "TransactionDate" : "2025-01-27",
+  "TransactionType" : "L-Inv-Contr-Cash Con",
+  "TransactionSource" : "AMG_MANUAL",
+  "BillToCustomerNumber" : "2",
+  "BillToSite" : "1",
+  "Comments" : "New Walk-in",
+  "InternalNotes" : "From SoapUI with ...",
+  "PaymentTerms" : "30 Net",
+  "LegalEntityIdentifier" : "204936624",
+  "ConversionRateType" : null,
+  "PurchaseOrder" : null,
+  "PurchaseOrderDate" : null,
+  "PurchaseOrderRevision" : null,
+  "FirstPartyRegistrationNumber" : null,
+  "ThirdPartyRegistrationNumber" : null,
+  "InvoicingRule" : null,
+  "ShipToCustomerName" : "شركه United (يونايتد كير)",
+  "ShipToCustomerNumber" : "2094",
+  "BillingDate" : "2025-01-27",
+  "BillToPartyId" : 300000002605370,
+  "BusinessUnit" : "Alfa Labs BU",
+  "InvoiceStatus" : "Complete",
+  "AccountingDate" : "2025-02-01",
+  "ShipToSite" : "2034",
+  "PayingCustomerName" : "شركه United (يونايتد كير)",
+  "PayingCustomerSite" : "1",
+  "BillToCustomerName" : "شركه United (يونايتد كير)",
+  "FreightAmount" : null,
+  "Carrier" : null,
+  "ShipDate" : null,
+  "ShippingReference" : null,
+  "BillToContact" : null,
+  "ShipToContact" : null,
+  "PrintOption" : "Yes",
+  "CreatedBy" : "amg.interface",
+  "CreationDate" : "2025-03-10T10:50:52.709+00:00",
+  "LastUpdatedBy" : "amg.interface",
+  "LastUpdateDate" : "2025-03-10T10:50:52.917+00:00",
+  "PayingCustomerAccount" : "2",
+  "SoldToPartyNumber" : "2094",
+  "RemitToAddress" : "(B2) الوحدة الإدارية بالدور الثالث مبنى الفا ميديكال جروب رقم, اسبانا بلازا قطعة الارض رقم ب اسكان ، مدخل 4-1",
+  "DefaultTaxationCountry" : "EG",
+  "EnteredAmount" : 9000,
+  "InvoiceBalanceAmount" : 9000,
+  "Prepayment" : "No",
+  "Intercompany" : "No",
+  "DocumentFiscalClassification" : null,
+  "BankAccountNumber" : null,
+  "CreditCardAuthorizationRequestIdentifier" : null,
+  "CreditCardExpirationDate" : null,
+  "CreditCardIssuerCode" : null,
+  "CreditCardTokenNumber" : null,
+  "CreditCardVoiceAuthorizationCode" : null,
+  "CreditCardErrorCode" : null,
+  "CreditCardErrorText" : null,
+  "CardHolderLastName" : null,
+  "CardHolderFirstName" : null,
+  "ReceiptMethod" : null,
+  "SalesPersonNumber" : null,
+  "StructuredPaymentReference" : null,
+  "InvoicePrinted" : null,
+  "LastPrintDate" : null,
+  "OriginalPrintDate" : null,
+  "DeliveryMethod" : null,
+  "Email" : null,
+  "AllowCompletion" : null,
+  "ControlCompletionReason" : null,
+  "receivablesInvoiceLines" : [ {
+    "CustomerTransactionLineId" : 300000004426805,
+    "LineNumber" : 1,
+    "Description" : "Walk-in",
+    "Quantity" : 1,
+    "UnitSellingPrice" : 9000,
+    "TaxClassificationCode" : null,
+    "SalesOrder" : null,
+    "AccountingRuleDuration" : null,
+    "RuleEndDate" : null,
+    "RuleStartDate" : null,
+    "AccountingRule" : null,
+    "Warehouse" : null,
+    "MemoLine" : null,
+    "UnitOfMeasure" : null,
+    "ItemNumber" : null,
+    "AllocatedFreightAmount" : null,
+    "AssessableValue" : 9000,
+    "SalesOrderDate" : null,
+    "LineAmount" : 9000,
+    "CreatedBy" : "amg.interface",
+    "CreationDate" : "2025-03-10T10:50:52.810+00:00",
+    "LastUpdatedBy" : "amg.interface",
+    "LastUpdateDate" : "2025-03-10T10:50:52.919+00:00",
+    "TransacationBusinessCategory" : "Sales Transaction",
+    "UserDefinedFiscalClassification" : null,
+    "ProductFiscalClassification" : null,
+    "ProductCategory" : null,
+    "ProductType" : null,
+    "LineIntendedUse" : null,
+    "LineAmountIncludesTax" : "Use Tax Rate Code",
+    "TaxInvoiceDate" : null,
+    "TaxInvoiceNumber" : null,
+    "TaxExemptionCertificateNumber" : null,
+    "TaxExemptionHandling" : "Standard",
+    "TaxExemptionReason" : null,
+    "links" : [ {
+      "rel" : "self",
+      "href" : "https://iajugs-test.fa.ocs.oraclecloud.com:443/fscmRestApi/resources/11.13.18.05/receivablesInvoices/300000004426804/child/receivablesInvoiceLines/300000004426805",
+      "name" : "receivablesInvoiceLines",
+      "kind" : "item",
+      "properties" : {
+        "changeIndicator" : "ACED0005737200136A6176612E7574696C2E41727261794C6973747881D21D99C7619D03000149000473697A65787000000001770400000001737200116A6176612E6C616E672E496E746567657212E2A0A4F781873802000149000576616C7565787200106A6176612E6C616E672E4E756D62657286AC951D0B94E08B02000078700000000478"
+      }
+    }, {
+      "rel" : "canonical",
+      "href" : "https://iajugs-test.fa.ocs.oraclecloud.com:443/fscmRestApi/resources/11.13.18.05/receivablesInvoices/300000004426804/child/receivablesInvoiceLines/300000004426805",
+      "name" : "receivablesInvoiceLines",
+      "kind" : "item"
+    }, {
+      "rel" : "parent",
+      "href" : "https://iajugs-test.fa.ocs.oraclecloud.com:443/fscmRestApi/resources/11.13.18.05/receivablesInvoices/300000004426804",
+      "name" : "receivablesInvoices",
+      "kind" : "item"
+    }, {
+      "rel" : "lov",
+      "href" : "https://iajugs-test.fa.ocs.oraclecloud.com:443/fscmRestApi/resources/11.13.18.05/receivablesInvoices/300000004426804/child/receivablesInvoiceLines/300000004426805/lov/exemptReasonCodes",
+      "name" : "exemptReasonCodes",
+      "kind" : "collection"
+    }, {
+      "rel" : "lov",
+      "href" : "https://iajugs-test.fa.ocs.oraclecloud.com:443/fscmRestApi/resources/11.13.18.05/receivablesInvoices/300000004426804/child/receivablesInvoiceLines/300000004426805/lov/productCategories",
+      "name" : "productCategories",
+      "kind" : "collection"
+    }, {
+      "rel" : "lov",
+      "href" : "https://iajugs-test.fa.ocs.oraclecloud.com:443/fscmRestApi/resources/11.13.18.05/receivablesInvoices/300000004426804/child/receivablesInvoiceLines/300000004426805/lov/userDefinedFiscClasses",
+      "name" : "userDefinedFiscClasses",
+      "kind" : "collection"
+    }, {
+      "rel" : "lov",
+      "href" : "https://iajugs-test.fa.ocs.oraclecloud.com:443/fscmRestApi/resources/11.13.18.05/receivablesInvoices/300000004426804/child/receivablesInvoiceLines/300000004426805/lov/accountingRules",
+      "name" : "accountingRules",
+      "kind" : "collection"
+    }, {
+      "rel" : "lov",
+      "href" : "https://iajugs-test.fa.ocs.oraclecloud.com:443/fscmRestApi/resources/11.13.18.05/receivablesInvoices/300000004426804/child/receivablesInvoiceLines/300000004426805/lov/transactionBizCategories",
+      "name" : "transactionBizCategories",
+      "kind" : "collection"
+    }, {
+      "rel" : "lov",
+      "href" : "https://iajugs-test.fa.ocs.oraclecloud.com:443/fscmRestApi/resources/11.13.18.05/receivablesInvoices/300000004426804/child/receivablesInvoiceLines/300000004426805/lov/unitOfMeasures",
+      "name" : "unitOfMeasures",
+      "kind" : "collection"
+    }, {
+      "rel" : "lov",
+      "href" : "https://iajugs-test.fa.ocs.oraclecloud.com:443/fscmRestApi/resources/11.13.18.05/receivablesInvoices/300000004426804/child/receivablesInvoiceLines/300000004426805/lov/taxExemptHandlingStatuses",
+      "name" : "taxExemptHandlingStatuses",
+      "kind" : "collection"
+    }, {
+      "rel" : "lov",
+      "href" : "https://iajugs-test.fa.ocs.oraclecloud.com:443/fscmRestApi/resources/11.13.18.05/receivablesInvoices/300000004426804/child/receivablesInvoiceLines/300000004426805/lov/warehouses",
+      "name" : "warehouses",
+      "kind" : "collection"
+    }, {
+      "rel" : "lov",
+      "href" : "https://iajugs-test.fa.ocs.oraclecloud.com:443/fscmRestApi/resources/11.13.18.05/receivablesInvoices/300000004426804/child/receivablesInvoiceLines/300000004426805/lov/itemNumbers",
+      "name" : "itemNumbers",
+      "kind" : "collection"
+    }, {
+      "rel" : "lov",
+      "href" : "https://iajugs-test.fa.ocs.oraclecloud.com:443/fscmRestApi/resources/11.13.18.05/receivablesInvoices/300000004426804/child/receivablesInvoiceLines/300000004426805/lov/productTypes",
+      "name" : "productTypes",
+      "kind" : "collection"
+    }, {
+      "rel" : "lov",
+      "href" : "https://iajugs-test.fa.ocs.oraclecloud.com:443/fscmRestApi/resources/11.13.18.05/receivablesInvoices/300000004426804/child/receivablesInvoiceLines/300000004426805/lov/productFiscClassifications",
+      "name" : "productFiscClassifications",
+      "kind" : "collection"
+    }, {
+      "rel" : "lov",
+      "href" : "https://iajugs-test.fa.ocs.oraclecloud.com:443/fscmRestApi/resources/11.13.18.05/receivablesInvoices/300000004426804/child/receivablesInvoiceLines/300000004426805/lov/memoLines",
+      "name" : "memoLines",
+      "kind" : "collection"
+    }, {
+      "rel" : "child",
+      "href" : "https://iajugs-test.fa.ocs.oraclecloud.com:443/fscmRestApi/resources/11.13.18.05/receivablesInvoices/300000004426804/child/receivablesInvoiceLines/300000004426805/child/attachments",
+      "name" : "attachments",
+      "kind" : "collection"
+    }, {
+      "rel" : "child",
+      "href" : "https://iajugs-test.fa.ocs.oraclecloud.com:443/fscmRestApi/resources/11.13.18.05/receivablesInvoices/300000004426804/child/receivablesInvoiceLines/300000004426805/child/receivablesInvoiceLineDFF",
+      "name" : "receivablesInvoiceLineDFF",
+      "kind" : "collection"
+    }, {
+      "rel" : "child",
+      "href" : "https://iajugs-test.fa.ocs.oraclecloud.com:443/fscmRestApi/resources/11.13.18.05/receivablesInvoices/300000004426804/child/receivablesInvoiceLines/300000004426805/child/receivablesInvoiceLineGdf",
+      "name" : "receivablesInvoiceLineGdf",
+      "kind" : "collection"
+    }, {
+      "rel" : "child",
+      "href" : "https://iajugs-test.fa.ocs.oraclecloud.com:443/fscmRestApi/resources/11.13.18.05/receivablesInvoices/300000004426804/child/receivablesInvoiceLines/300000004426805/child/receivablesInvoiceLineTaxLines",
+      "name" : "receivablesInvoiceLineTaxLines",
+      "kind" : "collection"
+    }, {
+      "rel" : "child",
+      "href" : "https://iajugs-test.fa.ocs.oraclecloud.com:443/fscmRestApi/resources/11.13.18.05/receivablesInvoices/300000004426804/child/receivablesInvoiceLines/300000004426805/child/receivablesInvoiceLineTransactionDFF",
+      "name" : "receivablesInvoiceLineTransactionDFF",
+      "kind" : "collection"
+    } ]
+  } ],
+  "receivablesInvoiceDistributions" : [ {
+    "DistributionId" : 300000004426806,
+    "InvoiceLineNumber" : 1,
+    "DetailedTaxLineNumber" : null,
+    "AccountClass" : "Revenue",
+    "AccountCombination" : "10-110102-41010102-213-L01012-000-10-0000-0000",
+    "Amount" : 9000,
+    "AccountedAmount" : 9000,
+    "Percent" : 100,
+    "Comments" : null,
+    "CreatedBy" : "amg.interface",
+    "CreationDate" : "2025-03-10T10:50:52.822+00:00",
+    "LastUpdateDate" : "2025-03-10T10:50:57+00:00",
+    "LastUpdatedBy" : "amg.interface",
+    "links" : [ {
+      "rel" : "self",
+      "href" : "https://iajugs-test.fa.ocs.oraclecloud.com:443/fscmRestApi/resources/11.13.18.05/receivablesInvoices/300000004426804/child/receivablesInvoiceDistributions/300000004426806",
+      "name" : "receivablesInvoiceDistributions",
+      "kind" : "item",
+      "properties" : {
+        "changeIndicator" : "ACED0005737200136A6176612E7574696C2E41727261794C6973747881D21D99C7619D03000149000473697A65787000000001770400000001737200116A6176612E6C616E672E496E746567657212E2A0A4F781873802000149000576616C7565787200106A6176612E6C616E672E4E756D62657286AC951D0B94E08B02000078700000000278"
+      }
+    }, {
+      "rel" : "canonical",
+      "href" : "https://iajugs-test.fa.ocs.oraclecloud.com:443/fscmRestApi/resources/11.13.18.05/receivablesInvoices/300000004426804/child/receivablesInvoiceDistributions/300000004426806",
+      "name" : "receivablesInvoiceDistributions",
+      "kind" : "item"
+    }, {
+      "rel" : "parent",
+      "href" : "https://iajugs-test.fa.ocs.oraclecloud.com:443/fscmRestApi/resources/11.13.18.05/receivablesInvoices/300000004426804",
+      "name" : "receivablesInvoices",
+      "kind" : "item"
+    }, {
+      "rel" : "child",
+      "href" : "https://iajugs-test.fa.ocs.oraclecloud.com:443/fscmRestApi/resources/11.13.18.05/receivablesInvoices/300000004426804/child/receivablesInvoiceDistributions/300000004426806/child/receivablesInvoiceDistributionDFF",
+      "name" : "receivablesInvoiceDistributionDFF",
+      "kind" : "collection"
+    } ]
+  } ],
+  "links" : [ {
+    "rel" : "self",
+    "href" : "https://iajugs-test.fa.ocs.oraclecloud.com:443/fscmRestApi/resources/11.13.18.05/receivablesInvoices/300000004426804",
+    "name" : "receivablesInvoices",
+    "kind" : "item",
+    "properties" : {
+      "changeIndicator" : "ACED0005737200136A6176612E7574696C2E41727261794C6973747881D21D99C7619D03000149000473697A65787000000001770400000001737200116A6176612E6C616E672E496E746567657212E2A0A4F781873802000149000576616C7565787200106A6176612E6C616E672E4E756D62657286AC951D0B94E08B02000078700000000278"
+    }
+  }, {
+    "rel" : "canonical",
+    "href" : "https://iajugs-test.fa.ocs.oraclecloud.com:443/fscmRestApi/resources/11.13.18.05/receivablesInvoices/300000004426804",
+    "name" : "receivablesInvoices",
+    "kind" : "item"
+  }, {
+    "rel" : "lov",
+    "href" : "https://iajugs-test.fa.ocs.oraclecloud.com:443/fscmRestApi/resources/11.13.18.05/receivablesInvoices/300000004426804/lov/billToCustomers",
+    "name" : "billToCustomers",
+    "kind" : "collection"
+  }, {
+    "rel" : "lov",
+    "href" : "https://iajugs-test.fa.ocs.oraclecloud.com:443/fscmRestApi/resources/11.13.18.05/receivablesInvoices/300000004426804/lov/invoicingRules",
+    "name" : "invoicingRules",
+    "kind" : "collection"
+  }, {
+    "rel" : "lov",
+    "href" : "https://iajugs-test.fa.ocs.oraclecloud.com:443/fscmRestApi/resources/11.13.18.05/receivablesInvoices/300000004426804/lov/transactionTypes",
+    "name" : "transactionTypes",
+    "kind" : "collection"
+  }, {
+    "rel" : "lov",
+    "href" : "https://iajugs-test.fa.ocs.oraclecloud.com:443/fscmRestApi/resources/11.13.18.05/receivablesInvoices/300000004426804/lov/billToSites",
+    "name" : "billToSites",
+    "kind" : "collection"
+  }, {
+    "rel" : "lov",
+    "href" : "https://iajugs-test.fa.ocs.oraclecloud.com:443/fscmRestApi/resources/11.13.18.05/receivablesInvoices/300000004426804/lov/taxationCountries",
+    "name" : "taxationCountries",
+    "kind" : "collection"
+  }, {
+    "rel" : "lov",
+    "href" : "https://iajugs-test.fa.ocs.oraclecloud.com:443/fscmRestApi/resources/11.13.18.05/receivablesInvoices/300000004426804/lov/businessUnits",
+    "name" : "businessUnits",
+    "kind" : "collection"
+  }, {
+    "rel" : "lov",
+    "href" : "https://iajugs-test.fa.ocs.oraclecloud.com:443/fscmRestApi/resources/11.13.18.05/receivablesInvoices/300000004426804/lov/transactionSources",
+    "name" : "transactionSources",
+    "kind" : "collection"
+  }, {
+    "rel" : "lov",
+    "href" : "https://iajugs-test.fa.ocs.oraclecloud.com:443/fscmRestApi/resources/11.13.18.05/receivablesInvoices/300000004426804/lov/invoiceStatuses",
+    "name" : "invoiceStatuses",
+    "kind" : "collection"
+  }, {
+    "rel" : "lov",
+    "href" : "https://iajugs-test.fa.ocs.oraclecloud.com:443/fscmRestApi/resources/11.13.18.05/receivablesInvoices/300000004426804/lov/deliveryMethodVA",
+    "name" : "deliveryMethodVA",
+    "kind" : "collection"
+  }, {
+    "rel" : "lov",
+    "href" : "https://iajugs-test.fa.ocs.oraclecloud.com:443/fscmRestApi/resources/11.13.18.05/receivablesInvoices/300000004426804/lov/thirdPartyTaxRegistrationNumbers",
+    "name" : "thirdPartyTaxRegistrationNumbers",
+    "kind" : "collection"
+  }, {
+    "rel" : "lov",
+    "href" : "https://iajugs-test.fa.ocs.oraclecloud.com:443/fscmRestApi/resources/11.13.18.05/receivablesInvoices/300000004426804/lov/PaymentTermsVA",
+    "name" : "PaymentTermsVA",
+    "kind" : "collection"
+  }, {
+    "rel" : "lov",
+    "href" : "https://iajugs-test.fa.ocs.oraclecloud.com:443/fscmRestApi/resources/11.13.18.05/receivablesInvoices/300000004426804/lov/legalEntities",
+    "name" : "legalEntities",
+    "kind" : "collection"
+  }, {
+    "rel" : "lov",
+    "href" : "https://iajugs-test.fa.ocs.oraclecloud.com:443/fscmRestApi/resources/11.13.18.05/receivablesInvoices/300000004426804/lov/shipToCustomers",
+    "name" : "shipToCustomers",
+    "kind" : "collection"
+  }, {
+    "rel" : "child",
+    "href" : "https://iajugs-test.fa.ocs.oraclecloud.com:443/fscmRestApi/resources/11.13.18.05/receivablesInvoices/300000004426804/child/attachments",
+    "name" : "attachments",
+    "kind" : "collection"
+  }, {
+    "rel" : "child",
+    "href" : "https://iajugs-test.fa.ocs.oraclecloud.com:443/fscmRestApi/resources/11.13.18.05/receivablesInvoices/300000004426804/child/notes",
+    "name" : "notes",
+    "kind" : "collection"
+  }, {
+    "rel" : "child",
+    "href" : "https://iajugs-test.fa.ocs.oraclecloud.com:443/fscmRestApi/resources/11.13.18.05/receivablesInvoices/300000004426804/child/receivablesInvoiceDFF",
+    "name" : "receivablesInvoiceDFF",
+    "kind" : "collection"
+  }, {
+    "rel" : "child",
+    "href" : "https://iajugs-test.fa.ocs.oraclecloud.com:443/fscmRestApi/resources/11.13.18.05/receivablesInvoices/300000004426804/child/receivablesInvoiceDistributions",
+    "name" : "receivablesInvoiceDistributions",
+    "kind" : "collection"
+  }, {
+    "rel" : "child",
+    "href" : "https://iajugs-test.fa.ocs.oraclecloud.com:443/fscmRestApi/resources/11.13.18.05/receivablesInvoices/300000004426804/child/receivablesInvoiceGdf",
+    "name" : "receivablesInvoiceGdf",
+    "kind" : "collection"
+  }, {
+    "rel" : "child",
+    "href" : "https://iajugs-test.fa.ocs.oraclecloud.com:443/fscmRestApi/resources/11.13.18.05/receivablesInvoices/300000004426804/child/receivablesInvoiceInstallments",
+    "name" : "receivablesInvoiceInstallments",
+    "kind" : "collection"
+  }, {
+    "rel" : "child",
+    "href" : "https://iajugs-test.fa.ocs.oraclecloud.com:443/fscmRestApi/resources/11.13.18.05/receivablesInvoices/300000004426804/child/receivablesInvoiceLines",
+    "name" : "receivablesInvoiceLines",
+    "kind" : "collection"
+  }, {
+    "rel" : "child",
+    "href" : "https://iajugs-test.fa.ocs.oraclecloud.com:443/fscmRestApi/resources/11.13.18.05/receivablesInvoices/300000004426804/child/receivablesInvoiceTransactionDFF",
+    "name" : "receivablesInvoiceTransactionDFF",
+    "kind" : "collection"
+  } ]
+}
+} ]
+}

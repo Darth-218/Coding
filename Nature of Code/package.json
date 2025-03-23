@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "type": "module"
+    "express": "^4.21.2",
+    "node-p5": "^1.0.4",
+    "p5": "^1.11.3"
+  }
+}

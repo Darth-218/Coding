@@ -1,0 +1,78 @@
+{
+  "parts" : [
+    {
+      "id" : "part1",
+      "path" : "/receivablesInvoices",
+      "operation" : "create",
+      "payload" : {
+	"BillingDate" : "2025-01-26",
+	"BillToCustomerNumber" : "2",
+	"BusinessUnit" : "Alfa Labs BU",
+	"Comments" : "New Walk-in",
+	"DueDate" : "2025-01-26",
+	"InternalNotes" : "From SoapUI with ...",
+	"InvoiceCurrencyCode" : "EGP",
+	"PaymentTerms" : "30 Net",
+	"TransactionDate" : "2025-01-26",
+	"TransactionSource" : "AMG_MANUAL",
+	"ShipToCustomerNumber" : "2094",
+	"ShipToSite" : "2034",
+	"TransactionType" : "L-Inv-Contr-Cash Con",
+	"receivablesInvoiceLines" : [
+	  {
+	    "Description" : "Walk-in",
+	    "LineNumber" : 1,
+	    "Quantity" : 1,
+	    "UnitSellingPrice" : 8500
+	  }
+	],
+	"receivablesInvoiceDistributions" : [
+	  {
+	    "InvoiceLineNumber" : 1,
+	    "DetailedTaxLineNumber" : null,
+	    "AccountClass" : "Revenue",
+	    "AccountCombination" : "10-110102-41010102-213-L01012-000-10-0000-0000",
+	    "Percent" : 100
+	  }
+	]
+      }
+    },
+    {
+      "id" : "part2",
+      "path" : "/receivablesInvoices",
+      "operation" : "create",
+      "payload" : {
+	"BillingDate" : "2025-01-27",
+	"BillToCustomerNumber" : "2",
+	"BusinessUnit" : "Alfa Labs BU",
+	"Comments" : "New Walk-in",
+	"DueDate" : "2025-01-27",
+	"InternalNotes" : "From SoapUI with ...",
+	"InvoiceCurrencyCode" : "EGP",
+	"PaymentTerms" : "30 Net",
+	"TransactionDate" : "2025-01-27",
+	"TransactionSource" : "AMG_MANUAL",
+	"ShipToCustomerNumber" : "2094",
+	"ShipToSite" : "2034",
+	"TransactionType" : "L-Inv-Contr-Cash Con",
+	"receivablesInvoiceLines" : [
+	  {
+	    "Description" : "Walk-in",
+	    "LineNumber" : 1,
+	    "Quantity" : 1,
+	    "UnitSellingPrice" : 9000
+	  }
+	],
+	"receivablesInvoiceDistributions" : [
+	  {
+	    "InvoiceLineNumber" : 1,
+	    "DetailedTaxLineNumber" : null,
+	    "AccountClass" : "Revenue",
+	    "AccountCombination" : "10-110102-41010102-213-L01012-000-10-0000-0000",
+	    "Percent" : 100
+	  }
+	]
+      }
+    }
+  ]
+}
